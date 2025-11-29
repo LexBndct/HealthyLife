@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthyLife Pro+ AI Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ===================== THEME TOGGLE ======================= -->
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="themeSwitcher">
+            <span class="slider round"></span>
+        </label>
+        <span id="themeLabel">Light Mode</span>
+    </div>
+
+    <!-- ===================== MAIN CONTAINER ======================= -->
+    <div class="container">
+
+        <!-- ===================== FORM PAGE ======================= -->
+        <div id="formPage" class="page active">
+
+            <h1 class="title">HealthyLife <span>Pro+</span></h1>
+            <p class="subtitle">Rencana makan & olahraga otomatis sesuai tubuh kamu!</p>
+
+            <div class="card">
+
+                <label>Username</label>
+                <input id="username" placeholder="contoh: alexbenedict">
+
+                <label>Umur</label>
+                <input id="age" type="number" placeholder="contoh: 18">
+
+                <label>Berat badan (kg)</label>
+                <input id="weight" type="number">
+
+                <label>Tinggi badan (cm)</label>
+                <input id="height" type="number">
+
+                <label>Jenis Kelamin</label>
+                <select id="gender">
+                    <option value="laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+
+                <label>Goal / Tujuan</label>
+                <select id="goal">
+                    <option value="turun">Menurunkan berat badan</option>
+                    <option value="naik">Menaikkan berat badan</option>
+                    <option value="sehat">Hidup sehat saja</option>
+                </select>
+
+                <label>Frekuensi Makan per Hari</label>
+                <select id="mealFreq">
+                    <option value="2">2x sehari (diet ketat)</option>
+                    <option value="3" selected>3x sehari (normal)</option>
+                    <option value="4">4x sehari (bulking)</option>
+                </select>
+
+                <button id="startBtn" class="btn-primary">Mulai Rencana</button>
+            </div>
+        </div>
+
+
+        <!-- ===================== DASHBOARD PAGE ======================= -->
+<div id="dashboardPage" class="page">
+
+    <div class="dashboard-header">
+        <h2 id="welcomeText"></h2>
+        <button id="logoutBtn" class="btn-logout">Logout 🚪</button>
+    </div>
+
+    <div class="bmi-box">
+        <h3>Status Tubuh Kamu</h3>
+        <p id="bmiValue">BMI: -</p>
+        <p id="bmiStatus">Status: -</p>
+        <p id="bmiRekom">Rekomendasi: -</p>
+    </div>
+
+    <div class="badge-section">
+        <h3>Pencapaian Badges</h3>
+        <div class="badges" id="badgeContainer"></div>
+    </div>
+
+
+    <div id="weeklyPlan" class="weekly-grid"></div>
+
+</div>
+
+
+        <!-- ===================== WORKOUT MODAL ======================= -->
+        <div id="workoutModal" class="modal">
+            <div class="modal-content">
+                <span class="closeModal">&times;</span>
+
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" class="modal-img" />
+                <p id="modalDesc"></p>
+                <p id="modalDuration"></p>
+                <p id="modalDifficulty"></p>
+            </div>
+        </div>
+
+    </div> <!-- END MAIN CONTAINER -->
+
+    <!-- ===================== JAVASCRIPT ======================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
